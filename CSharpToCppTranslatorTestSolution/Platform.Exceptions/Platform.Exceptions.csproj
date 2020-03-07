@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\Ensure.cs" Link="Ensure.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\EnsureExtensions.cs" Link="EnsureExtensions.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\ExceptionExtensions.cs" Link="ExceptionExtensions.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\ExtensionRoots\EnsureAlwaysExtensionRoot.cs" Link="ExtensionRoots\EnsureAlwaysExtensionRoot.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\ExtensionRoots\EnsureOnDebugExtensionRoot.cs" Link="ExtensionRoots\EnsureOnDebugExtensionRoot.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\ExtensionRoots\ThrowExtensionRoot.cs" Link="ExtensionRoots\ThrowExtensionRoot.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\IgnoredExceptions.cs" Link="IgnoredExceptions.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\Throw.cs" Link="Throw.cs" />
+    <Compile Include="..\..\..\Exceptions\csharp\Platform.Exceptions\ThrowExtensions.cs" Link="ThrowExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ExtensionRoots\" />
+  </ItemGroup>
+
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
+    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Exceptions\csharp\$(ProjectName) ..\..\..\Exceptions\cpp\$(ProjectName)\"></Exec>
+  </Target>
+
+</Project>

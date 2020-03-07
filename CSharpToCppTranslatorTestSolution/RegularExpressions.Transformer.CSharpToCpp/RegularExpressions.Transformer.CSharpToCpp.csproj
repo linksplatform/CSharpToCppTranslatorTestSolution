@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RegularExpressions.Transformer\RegularExpressions.Transformer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\RegularExpressions.Transformer.CSharpToCpp\csharp\Platform.RegularExpressions.Transformer.CSharpToCpp\CSharpToCppTransformer.cs" Link="CSharpToCppTransformer.cs" />
+  </ItemGroup>
+
+</Project>

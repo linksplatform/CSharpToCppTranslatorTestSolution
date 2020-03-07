@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ICounter[TResult, TArgument].cs" Link="ICounter[TResult, TArgument].cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ICounter[TResult].cs" Link="ICounter[TResult].cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ICriterionMatcher.cs" Link="ICriterionMatcher.cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\IFactory.cs" Link="IFactory.cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\IProperties.cs" Link="IProperties.cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\IProperty.cs" Link="IProperty.cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\IProvider[TProvided, TArgument].cs" Link="IProvider[TProvided, TArgument].cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\IProvider[TProvided].cs" Link="IProvider[TProvided].cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ISetter[TValue, TArgument].cs" Link="ISetter[TValue, TArgument].cs" />
+    <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ISetter[TValue].cs" Link="ISetter[TValue].cs" />
+  </ItemGroup>
+
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
+    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Interfaces\csharp\$(ProjectName) ..\..\..\Interfaces\cpp\$(ProjectName)\"></Exec>
+  </Target>
+
+</Project>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Platform.Collections" Version="0.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\FileTransformer.cs" Link="FileTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\IFileTransformer.cs" Link="IFileTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ISubstitutionRule.cs" Link="ISubstitutionRule.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformer.cs" Link="ITextTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformerExtensions.cs" Link="ITextTransformerExtensions.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformersListExtensions.cs" Link="ITextTransformersListExtensions.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITransformer.cs" Link="ITransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\LoggingFileTransformer.cs" Link="LoggingFileTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\RegexExtensions.cs" Link="RegexExtensions.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\StringExtensions.cs" Link="StringExtensions.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\SubstitutionRule.cs" Link="SubstitutionRule.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\TextSteppedTransformer.cs" Link="TextSteppedTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\TextTransformer.cs" Link="TextTransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\TransformerCLI.cs" Link="TransformerCLI.cs" />
+  </ItemGroup>
+
+</Project>
