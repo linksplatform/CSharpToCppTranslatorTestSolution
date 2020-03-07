@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions.Transformer", "RegularExpressions.Transformer\RegularExpressions.Transformer.csproj", "{7DD0CB6B-F8B0-4994-ADD2-254DAAE51C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions.Transformer", "RegularExpressions.Transformer\RegularExpressions.Transformer.csproj", "{7DD0CB6B-F8B0-4994-ADD2-254DAAE51C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions.Transformer.CSharpToCpp", "RegularExpressions.Transformer.CSharpToCpp\RegularExpressions.Transformer.CSharpToCpp.csproj", "{860BDACB-13BF-4B01-AA4F-A72F1A5273D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions.Transformer.CSharpToCpp", "RegularExpressions.Transformer.CSharpToCpp\RegularExpressions.Transformer.CSharpToCpp.csproj", "{860BDACB-13BF-4B01-AA4F-A72F1A5273D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpToCppTranslator", "CSharpToCppTranslator\CSharpToCppTranslator.csproj", "{5FD372AA-15CB-47FF-8DAB-3678A751EF99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpToCppTranslator", "CSharpToCppTranslator\CSharpToCppTranslator.csproj", "{5FD372AA-15CB-47FF-8DAB-3678A751EF99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Interfaces", "Platform.Interfaces\Platform.Interfaces.csproj", "{C05000F1-C620-4781-9733-95CD32EB1A25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Interfaces", "Platform.Interfaces\Platform.Interfaces.csproj", "{C05000F1-C620-4781-9733-95CD32EB1A25}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5FD372AA-15CB-47FF-8DAB-3678A751EF99} = {5FD372AA-15CB-47FF-8DAB-3678A751EF99}
 	EndProjectSection
@@ -21,17 +21,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Interfaces.Templat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Interfaces.TemplateLibrary.Tests", "..\..\Interfaces\cpp\Platform.Interfaces.Tests\Platform.Interfaces.TemplateLibrary.Tests.vcxproj", "{8D50757E-6191-4D9D-8B9D-263BC187E785}"
 	ProjectSection(ProjectDependencies) = postProject
+		{73BE1D33-D38D-46FB-B61A-C2B4BF23B045} = {73BE1D33-D38D-46FB-B61A-C2B4BF23B045}
 		{9E967B6A-E518-4A44-ABC6-3162C0D8F3A4} = {9E967B6A-E518-4A44-ABC6-3162C0D8F3A4}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Interfaces.Tests", "Platform.Interfaces.Tests\Platform.Interfaces.Tests.csproj", "{73BE1D33-D38D-46FB-B61A-C2B4BF23B045}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Interfaces.Tests", "Platform.Interfaces.Tests\Platform.Interfaces.Tests.csproj", "{73BE1D33-D38D-46FB-B61A-C2B4BF23B045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Exceptions", "Platform.Exceptions\Platform.Exceptions.csproj", "{98F35339-88E4-4168-8574-586A86AA8DE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Exceptions", "Platform.Exceptions\Platform.Exceptions.csproj", "{98F35339-88E4-4168-8574-586A86AA8DE5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5FD372AA-15CB-47FF-8DAB-3678A751EF99} = {5FD372AA-15CB-47FF-8DAB-3678A751EF99}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Exceptions.Tests", "Platform.Exceptions.Tests\Platform.Exceptions.Tests.csproj", "{52EBF95F-C655-4683-A677-2B065045A6E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Exceptions.Tests", "Platform.Exceptions.Tests\Platform.Exceptions.Tests.csproj", "{52EBF95F-C655-4683-A677-2B065045A6E3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Exceptions.TemplateLibrary", "..\..\Exceptions\cpp\Platform.Exceptions\Platform.Exceptions.TemplateLibrary.vcxproj", "{A032E5B1-D641-4211-98C1-DE34EF72380F}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -41,6 +42,7 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Exceptions.TemplateLibrary.Tests", "..\..\Exceptions\cpp\Platform.Exceptions.Tests\Platform.Exceptions.TemplateLibrary.Tests.vcxproj", "{D581C66B-13C8-48BF-B634-982C18D01DEE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{52EBF95F-C655-4683-A677-2B065045A6E3} = {52EBF95F-C655-4683-A677-2B065045A6E3}
+		{A032E5B1-D641-4211-98C1-DE34EF72380F} = {A032E5B1-D641-4211-98C1-DE34EF72380F}
 	EndProjectSection
 EndProject
 Global
