@@ -1,0 +1,2 @@
+# CSharpToCppTranslatorTestSolution
+Test solution for CSharpToCppTranslator
