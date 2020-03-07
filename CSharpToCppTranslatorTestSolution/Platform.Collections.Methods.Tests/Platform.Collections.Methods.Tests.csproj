@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods.Tests\RecursionlessSizeBalancedTree.cs" Link="RecursionlessSizeBalancedTree.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods.Tests\SizeBalancedTree.cs" Link="SizeBalancedTree.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods.Tests\SizedAndThreadedAVLBalancedTree.cs" Link="SizedAndThreadedAVLBalancedTree.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods.Tests\TestExtensions.cs" Link="TestExtensions.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods.Tests\TreesTests.cs" Link="TreesTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" PrivateAssets="All" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Platform.Collections.Methods\Platform.Collections.Methods.csproj" />
+  </ItemGroup>
+
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netcoreapp3.1'">
+    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Collections.Methods\csharp\$(ProjectName) ..\..\..\Collections.Methods\cpp\$(ProjectName)\ .cs .cpp debug"></Exec>
+  </Target>
+
+</Project>

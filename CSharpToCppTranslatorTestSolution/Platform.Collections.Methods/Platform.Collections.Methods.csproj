@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\GenericCollectionMethodsBase.cs" Link="GenericCollectionMethodsBase.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Lists\CircularDoublyLinkedListMethods.cs" Link="Lists\CircularDoublyLinkedListMethods.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Lists\DoublyLinkedListMethodsBase.cs" Link="Lists\DoublyLinkedListMethodsBase.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Lists\OpenDoublyLinkedListMethods.cs" Link="Lists\OpenDoublyLinkedListMethods.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Trees\RecursionlessSizeBalancedTreeMethods.cs" Link="Trees\RecursionlessSizeBalancedTreeMethods.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Trees\SizeBalancedTreeMethods.cs" Link="Trees\SizeBalancedTreeMethods.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Trees\SizedAndThreadedAVLBalancedTreeMethods.cs" Link="Trees\SizedAndThreadedAVLBalancedTreeMethods.cs" />
+    <Compile Include="..\..\..\Collections.Methods\csharp\Platform.Collections.Methods\Trees\SizedBinaryTreeMethodsBase.cs" Link="Trees\SizedBinaryTreeMethodsBase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Lists\" />
+    <Folder Include="Trees\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Platform.Numbers" Version="0.4.0" />
+  </ItemGroup>
+
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
+    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Collections.Methods\csharp\$(ProjectName) ..\..\..\Collections.Methods\cpp\$(ProjectName)\ .cs .h debug"></Exec>
+  </Target>
+
+</Project>

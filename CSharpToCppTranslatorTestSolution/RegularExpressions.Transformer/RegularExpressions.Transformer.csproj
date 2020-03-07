@@ -18,6 +18,7 @@
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformerExtensions.cs" Link="ITextTransformerExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformersListExtensions.cs" Link="ITextTransformersListExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITransformer.cs" Link="ITransformer.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITransformerExtensions.cs" Link="ITransformerExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\LoggingFileTransformer.cs" Link="LoggingFileTransformer.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\RegexExtensions.cs" Link="RegexExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\StringExtensions.cs" Link="StringExtensions.cs" />
