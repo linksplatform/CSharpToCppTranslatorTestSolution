@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\Disposable.cs" Link="Disposable.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\DisposableBase.cs" Link="DisposableBase.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\Disposable[TPrimary, TAuxiliary].cs" Link="Disposable[TPrimary, TAuxiliary].cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\Disposable[T].cs" Link="Disposable[T].cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\Disposal.cs" Link="Disposal.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\EnsureExtensions.cs" Link="EnsureExtensions.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\GenericObjectExtensions.cs" Link="GenericObjectExtensions.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\IDisposable.cs" Link="IDisposable.cs" />
+    <Compile Include="..\..\..\Disposables\csharp\Platform.Disposables\IDisposableExtensions.cs" Link="IDisposableExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Platform.Exceptions" Version="0.3.0" />
+  </ItemGroup>
+
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
+    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Disposables\csharp\$(ProjectName) ..\..\..\Disposables\cpp\$(ProjectName)\ .cs .h debug"></Exec>
+  </Target>
+
+</Project>
