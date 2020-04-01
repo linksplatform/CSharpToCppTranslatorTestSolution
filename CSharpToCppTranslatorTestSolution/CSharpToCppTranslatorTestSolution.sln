@@ -88,7 +88,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Ranges.TemplateLib
 		{5F06C4F6-05A1-463D-B654-BDCD88D10E88} = {5F06C4F6-05A1-463D-B654-BDCD88D10E88}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Disposables", "Platform.Disposables\Platform.Disposables.csproj", "{8BF71962-DA64-4F66-A000-846B1184ADEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables", "Platform.Disposables\Platform.Disposables.csproj", "{8BF71962-DA64-4F66-A000-846B1184ADEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5FD372AA-15CB-47FF-8DAB-3678A751EF99} = {5FD372AA-15CB-47FF-8DAB-3678A751EF99}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
