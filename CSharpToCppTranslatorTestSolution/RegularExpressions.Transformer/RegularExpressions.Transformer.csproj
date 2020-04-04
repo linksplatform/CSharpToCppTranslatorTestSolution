@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Collections" Version="0.2.1" />
+    <PackageReference Include="Platform.IO" Version="0.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +18,9 @@
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformerExtensions.cs" Link="ITextTransformerExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITextTransformersListExtensions.cs" Link="ITextTransformersListExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITransformer.cs" Link="ITransformer.cs" />
-    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\ITransformerExtensions.cs" Link="ITransformerExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\LoggingFileTransformer.cs" Link="LoggingFileTransformer.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\RegexExtensions.cs" Link="RegexExtensions.cs" />
+    <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\Steps.cs" Link="Steps.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\StringExtensions.cs" Link="StringExtensions.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\SubstitutionRule.cs" Link="SubstitutionRule.cs" />
     <Compile Include="..\..\..\RegularExpressions.Transformer\csharp\Platform.RegularExpressions.Transformer\TextSteppedTransformer.cs" Link="TextSteppedTransformer.cs" />
