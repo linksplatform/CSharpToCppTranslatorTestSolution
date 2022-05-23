@@ -23,8 +23,5 @@
     <PackageReference Include="Platform.Exceptions" Version="0.3.0" />
   </ItemGroup>
 
-  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
-    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Disposables\csharp\$(ProjectName) ..\..\..\Disposables\cpp\$(ProjectName)\ .cs .h debug"></Exec>
-  </Target>
 
 </Project>

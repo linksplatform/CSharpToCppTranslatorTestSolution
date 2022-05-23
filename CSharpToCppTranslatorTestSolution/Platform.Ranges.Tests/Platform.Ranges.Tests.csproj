@@ -23,8 +23,5 @@
     <ProjectReference Include="..\Platform.Ranges\Platform.Ranges.csproj" />
   </ItemGroup>
 
-  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netcoreapp3.1'">
-    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Ranges\csharp\$(ProjectName) ..\..\..\Ranges\cpp\$(ProjectName)\ .cs .cpp debug"></Exec>
-  </Target>
 
 </Project>

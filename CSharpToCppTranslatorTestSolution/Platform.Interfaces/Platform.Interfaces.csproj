@@ -20,8 +20,5 @@
     <Compile Include="..\..\..\Interfaces\csharp\Platform.Interfaces\ISetter[TValue].cs" Link="ISetter[TValue].cs" />
   </ItemGroup>
 
-  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'netstandard2.1'">
-    <Exec Command="..\CSharpToCppTranslator\bin\$(Configuration)\netcoreapp3.1\CSharpToCppTranslator.exe ..\..\..\Interfaces\csharp\$(ProjectName) ..\..\..\Interfaces\cpp\$(ProjectName)\ .cs .h debug"></Exec>
-  </Target>
 
 </Project>
