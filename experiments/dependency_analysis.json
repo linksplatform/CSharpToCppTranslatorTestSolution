@@ -1,0 +1,163 @@
+{
+  "projects": {
+    "RegularExpressions.Transformer.CSharpToCpp": {
+      "path": "CSharpToCppTranslatorTestSolution/RegularExpressions.Transformer.CSharpToCpp/RegularExpressions.Transformer.CSharpToCpp.csproj",
+      "project_dependencies": [
+        "RegularExpressions.Transformer"
+      ],
+      "package_dependencies": []
+    },
+    "Platform.Exceptions.Tests": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Exceptions.Tests/Platform.Exceptions.Tests.csproj",
+      "project_dependencies": [
+        "Platform.Exceptions"
+      ],
+      "package_dependencies": [
+        "Microsoft.NET.Test.Sdk",
+        "xunit",
+        "xunit.runner.visualstudio",
+        "coverlet.collector"
+      ]
+    },
+    "CSharpToCppTranslator": {
+      "path": "CSharpToCppTranslatorTestSolution/CSharpToCppTranslator/CSharpToCppTranslator.csproj",
+      "project_dependencies": [
+        "RegularExpressions.Transformer.CSharpToCpp"
+      ],
+      "package_dependencies": []
+    },
+    "Platform.Disposables": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Disposables/Platform.Disposables.csproj",
+      "project_dependencies": [],
+      "package_dependencies": [
+        "Platform.Exceptions"
+      ]
+    },
+    "Platform.Interfaces": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Interfaces/Platform.Interfaces.csproj",
+      "project_dependencies": [],
+      "package_dependencies": []
+    },
+    "Platform.Collections.Methods": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Collections.Methods/Platform.Collections.Methods.csproj",
+      "project_dependencies": [],
+      "package_dependencies": [
+        "Platform.Numbers"
+      ]
+    },
+    "Platform.Collections.Methods.Tests": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Collections.Methods.Tests/Platform.Collections.Methods.Tests.csproj",
+      "project_dependencies": [
+        "Platform.Collections.Methods"
+      ],
+      "package_dependencies": [
+        "Microsoft.NET.Test.Sdk",
+        "xunit",
+        "xunit.runner.visualstudio",
+        "coverlet.collector"
+      ]
+    },
+    "Platform.Ranges": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Ranges/Platform.Ranges.csproj",
+      "project_dependencies": [],
+      "package_dependencies": [
+        "Platform.Exceptions"
+      ]
+    },
+    "RegularExpressions.Transformer": {
+      "path": "CSharpToCppTranslatorTestSolution/RegularExpressions.Transformer/RegularExpressions.Transformer.csproj",
+      "project_dependencies": [],
+      "package_dependencies": [
+        "Platform.IO"
+      ]
+    },
+    "Platform.Ranges.Tests": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Ranges.Tests/Platform.Ranges.Tests.csproj",
+      "project_dependencies": [
+        "Platform.Ranges"
+      ],
+      "package_dependencies": [
+        "Microsoft.NET.Test.Sdk",
+        "xunit",
+        "xunit.runner.visualstudio",
+        "coverlet.collector"
+      ]
+    },
+    "Platform.Exceptions": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Exceptions/Platform.Exceptions.csproj",
+      "project_dependencies": [],
+      "package_dependencies": []
+    },
+    "Platform.Interfaces.Tests": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Interfaces.Tests/Platform.Interfaces.Tests.csproj",
+      "project_dependencies": [
+        "Platform.Interfaces"
+      ],
+      "package_dependencies": [
+        "Microsoft.NET.Test.Sdk",
+        "xunit",
+        "xunit.runner.visualstudio",
+        "coverlet.collector"
+      ]
+    },
+    "Platform.Collections.Methods.Tests.Console": {
+      "path": "CSharpToCppTranslatorTestSolution/Platform.Collections.Methods.Tests.Console/Platform.Collections.Methods.Tests.Console.csproj",
+      "project_dependencies": [
+        "Platform.Collections.Methods.Tests"
+      ],
+      "package_dependencies": [
+        "Platform.Diagnostics"
+      ]
+    }
+  },
+  "dependency_graph": {
+    "RegularExpressions.Transformer.CSharpToCpp": [
+      "RegularExpressions.Transformer"
+    ],
+    "Platform.Exceptions.Tests": [
+      "Platform.Exceptions"
+    ],
+    "CSharpToCppTranslator": [
+      "RegularExpressions.Transformer.CSharpToCpp"
+    ],
+    "Platform.Disposables": [],
+    "Platform.Interfaces": [],
+    "Platform.Collections.Methods": [],
+    "Platform.Collections.Methods.Tests": [
+      "Platform.Collections.Methods"
+    ],
+    "Platform.Ranges": [],
+    "RegularExpressions.Transformer": [],
+    "Platform.Ranges.Tests": [
+      "Platform.Ranges"
+    ],
+    "Platform.Exceptions": [],
+    "Platform.Interfaces.Tests": [
+      "Platform.Interfaces"
+    ],
+    "Platform.Collections.Methods.Tests.Console": [
+      "Platform.Collections.Methods.Tests"
+    ]
+  },
+  "parallel_groups": [
+    [
+      "Platform.Interfaces",
+      "Platform.Collections.Methods",
+      "Platform.Ranges",
+      "Platform.Disposables",
+      "RegularExpressions.Transformer",
+      "Platform.Exceptions"
+    ],
+    [
+      "Platform.Ranges.Tests",
+      "Platform.Collections.Methods.Tests",
+      "Platform.Interfaces.Tests",
+      "Platform.Exceptions.Tests",
+      "RegularExpressions.Transformer.CSharpToCpp"
+    ],
+    [
+      "CSharpToCppTranslator",
+      "Platform.Collections.Methods.Tests.Console"
+    ]
+  ]
+}
